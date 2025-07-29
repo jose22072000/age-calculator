@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Age Calculator</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <h1>Age Calculator</h1>
+  <form id="ageForm" autocomplete="off">
+    <label for="birthdate">Enter your birth date:</label>
+    <div class="datepicker-wrapper">
+      <input type="text" id="birthdate" name="birthdate" placeholder="DD/MM/YYYY" readonly />
+      <svg class="calendar-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7 10h5v5H7z" opacity=".3"/>
+        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+      </svg>
+      <div class="calendar" id="calendar" style="display:none;"></div>
+    </div>
+    <button type="submit">Calculate</button>
+  </form>
+  <div class="error" id="error"></div>
+  <div class="result" id="result"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
